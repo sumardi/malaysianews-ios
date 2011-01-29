@@ -16,6 +16,8 @@
 		28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; };
 		9F8FF1AA12F4827C001FDEAF /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F8FF1A912F4827C001FDEAF /* MainWindow.xib */; };
 		9F8FF1B012F482DD001FDEAF /* malaysianews_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F8FF1AF12F482DD001FDEAF /* malaysianews_ico.png */; };
+		9F8FF1D312F488E9001FDEAF /* NewsIndexesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8FF1D212F488E9001FDEAF /* NewsIndexesViewController.m */; };
+		9F8FF1D512F488FF001FDEAF /* NewsIndexesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F8FF1D412F488FF001FDEAF /* NewsIndexesView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,9 @@
 		8D1107310486CEB800E47090 /* MalaysiaNews-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MalaysiaNews-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		9F8FF1A912F4827C001FDEAF /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = Views/MainWindow.xib; sourceTree = "<group>"; };
 		9F8FF1AF12F482DD001FDEAF /* malaysianews_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = malaysianews_ico.png; path = Images/malaysianews_ico.png; sourceTree = "<group>"; };
+		9F8FF1D112F488E9001FDEAF /* NewsIndexesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsIndexesViewController.h; sourceTree = "<group>"; };
+		9F8FF1D212F488E9001FDEAF /* NewsIndexesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsIndexesViewController.m; sourceTree = "<group>"; };
+		9F8FF1D412F488FF001FDEAF /* NewsIndexesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsIndexesView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +59,8 @@
 			children = (
 				1D3623240D0F684500981E51 /* MalaysiaNewsAppDelegate.h */,
 				1D3623250D0F684500981E51 /* MalaysiaNewsAppDelegate.m */,
+				9F8FF1D112F488E9001FDEAF /* NewsIndexesViewController.h */,
+				9F8FF1D212F488E9001FDEAF /* NewsIndexesViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -113,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				9F8FF1A912F4827C001FDEAF /* MainWindow.xib */,
+				9F8FF1D412F488FF001FDEAF /* NewsIndexesView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -184,6 +192,7 @@
 			files = (
 				9F8FF1AA12F4827C001FDEAF /* MainWindow.xib in Resources */,
 				9F8FF1B012F482DD001FDEAF /* malaysianews_ico.png in Resources */,
+				9F8FF1D512F488FF001FDEAF /* NewsIndexesView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +206,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* MalaysiaNewsAppDelegate.m in Sources */,
 				28193060112F816700ECF9B4 /* MalaysiaNews.xcdatamodeld in Sources */,
+				9F8FF1D312F488E9001FDEAF /* NewsIndexesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

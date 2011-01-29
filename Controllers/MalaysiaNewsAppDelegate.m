@@ -24,7 +24,7 @@
 
 @implementation MalaysiaNewsAppDelegate
 
-@synthesize window;
+@synthesize window, navigationController;
 
 
 #pragma mark -
@@ -35,7 +35,7 @@
     // Override point for customization after application launch.
     
     [self.window makeKeyAndVisible];
-    
+    [self.window addSubview:navigationController.view];
     return YES;
 }
 
@@ -208,6 +208,7 @@
     [persistentStoreCoordinator_ release];
     
     [window release];
+	[navigationController release];
     [super dealloc];
 }
 
