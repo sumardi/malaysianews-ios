@@ -20,10 +20,11 @@
 //	along with Malaysia News. If not, see <http://www.gnu.org/licenses/>
 
 #import "NewsIndexesViewController.h"
-
+#import "MalaysiaNewsAppDelegate.h"
 
 @implementation NewsIndexesViewController
 
+@synthesize appDelegate;
 
 #pragma mark -
 #pragma mark Initialization
@@ -51,6 +52,8 @@
     [super viewDidLoad];
 	self.title = @"Malaysia News";
 	
+	self.appDelegate = (MalaysiaNewsAppDelegate *)[[UIApplication sharedApplication] delegate];
+	NSLog(@"%@", self.appDelegate.data);	
 	UIImage *refreshImg = [UIImage imageNamed:@"refresh.png"];
 	UIBarButtonItem *refreshItem = [[[UIBarButtonItem alloc] initWithImage:refreshImg 
 														style:UIBarButtonItemStylePlain 
@@ -99,7 +102,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 3;
+    return [self.appDelegate.data count];
 }
 
 
@@ -110,11 +113,14 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
     
     // Configure the cell...
-    
+    for(NSMutableDictionary *news in self.appDelegate.data) {
+		cell.textLabel.text = [NSString stringWithFormat:@"%@", news];
+		cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%i_img.png", indexPath.row]];
+	}
     return cell;
 }
 
@@ -171,6 +177,11 @@
     [self.navigationController pushViewController:detailViewController animated:YES];
     [detailViewController release];
     */
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+	return 60;
 }
 
 
@@ -191,6 +202,7 @@
 
 
 - (void)dealloc {
+	[appDelegate release];
     [super dealloc];
 }
 

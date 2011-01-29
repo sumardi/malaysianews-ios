@@ -20,10 +20,12 @@
 //	along with Malaysia News. If not, see <http://www.gnu.org/licenses/>
 
 #import <UIKit/UIKit.h>
-
+@class MalaysiaNewsAppDelegate;
 
 @interface NewsIndexesViewController : UITableViewController {
-
+	MalaysiaNewsAppDelegate *appDelegate;
 }
+
+@property (nonatomic, retain) MalaysiaNewsAppDelegate *appDelegate;
 
 @end

@@ -25,10 +25,17 @@
 @implementation MalaysiaNewsAppDelegate
 
 @synthesize window, navigationController;
-
+@synthesize data;
 
 #pragma mark -
 #pragma mark Application lifecycle
+
+// Get data from plist
+-(NSDictionary *) readList {
+	NSString *path = [[NSBundle mainBundle] pathForResource:@"FeedsURL" ofType:@"plist"];
+	NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
+	return dict;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
@@ -36,6 +43,8 @@
     
     [self.window makeKeyAndVisible];
     [self.window addSubview:navigationController.view];
+	
+	self.data = [[NSMutableDictionary alloc] initWithDictionary:[[self readList] mutableCopy]];
     return YES;
 }
 
@@ -91,6 +100,7 @@
 - (void)dealloc {
     [window release];
 	[navigationController release];
+	[data release];
     [super dealloc];
 }
 

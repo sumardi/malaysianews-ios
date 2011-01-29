@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>The Star</key>
+	<dict>
+		<key>Sports</key>
+		<string>http://thestar.com.my.feedsportal.com/c/33048/f/534557/index.rss</string>
+		<key>Business</key>
+		<string>http://thestar.com.my.feedsportal.com/c/33048/f/534556/index.rss</string>
+		<key>Nation</key>
+		<string>http://thestar.com.my.feedsportal.com/c/33048/f/534555/index.rss</string>
+	</dict>
+</dict>
+</plist>

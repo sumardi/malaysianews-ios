@@ -24,10 +24,14 @@
 @interface MalaysiaNewsAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
 	UINavigationController *navigationController;
+	
+	NSMutableDictionary *data;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
+
+@property (nonatomic, retain) NSMutableDictionary *data;
 
 @end
 
