@@ -43,10 +43,20 @@
 #pragma mark -
 #pragma mark View lifecycle
 
+-(IBAction) updateFeeds:(id) sender {
+	
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.title = @"Malaysia News";
+	
+	UIImage *refreshImg = [UIImage imageNamed:@"refresh.png"];
+	UIBarButtonItem *refreshItem = [[[UIBarButtonItem alloc] initWithImage:refreshImg 
+														style:UIBarButtonItemStylePlain 
+														target:self 
+														action:@selector(updateFeeds:)] autorelease];
+	self.navigationItem.rightBarButtonItem = refreshItem;
 }
 
 /*
