@@ -11,7 +11,6 @@
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		28193060112F816700ECF9B4 /* MalaysiaNews.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2819305F112F816700ECF9B4 /* MalaysiaNews.xcdatamodeld */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; };
 		9F8FF1AA12F4827C001FDEAF /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F8FF1A912F4827C001FDEAF /* MainWindow.xib */; };
@@ -28,7 +27,6 @@
 		1D6058910D05DD3D006BFB54 /* MalaysiaNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MalaysiaNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		28C3AD890F43EF2300507BA6 /* MalaysiaNews.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = MalaysiaNews.xcdatamodel; sourceTree = "<group>"; };
 		28D801B30F44B63D00FB423F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* MalaysiaNews_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MalaysiaNews_Prefix.pch; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				9F8FF1AB12F48283001FDEAF /* Models */,
 				9F8FF1A612F48223001FDEAF /* Views */,
 				080E96DDFE201D6D7F000001 /* Controllers */,
 				29B97315FDCFA39411CA2CEA /* Resources */,
@@ -125,14 +122,6 @@
 				9F8FF1D412F488FF001FDEAF /* NewsIndexesView.xib */,
 			);
 			name = Views;
-			sourceTree = "<group>";
-		};
-		9F8FF1AB12F48283001FDEAF /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				2819305F112F816700ECF9B4 /* MalaysiaNews.xcdatamodeld */,
-			);
-			name = Models;
 			sourceTree = "<group>";
 		};
 		9F8FF1AC12F482B3001FDEAF /* Images */ = {
@@ -209,7 +198,6 @@
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* MalaysiaNewsAppDelegate.m in Sources */,
-				28193060112F816700ECF9B4 /* MalaysiaNews.xcdatamodeld in Sources */,
 				9F8FF1D312F488E9001FDEAF /* NewsIndexesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,20 +281,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		2819305F112F816700ECF9B4 /* MalaysiaNews.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				28C3AD890F43EF2300507BA6 /* MalaysiaNews.xcdatamodel */,
-			);
-			currentVersion = 28C3AD890F43EF2300507BA6 /* MalaysiaNews.xcdatamodel */;
-			name = MalaysiaNews.xcdatamodeld;
-			path = Models/MalaysiaNews.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
 }
