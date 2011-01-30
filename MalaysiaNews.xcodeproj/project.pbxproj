@@ -98,6 +98,8 @@
 		9F8FF50B12F5D2CF001FDEAF /* CNumberToStringValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8FF4E112F5D2CF001FDEAF /* CNumberToStringValueTransformer.m */; };
 		9F8FF51112F5D340001FDEAF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8FF51012F5D340001FDEAF /* CFNetwork.framework */; };
 		9F8FF51D12F5D42D001FDEAF /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8FF51C12F5D42D001FDEAF /* libxml2.2.dylib */; };
+		9F8FF67112F5F410001FDEAF /* EntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8FF67012F5F410001FDEAF /* EntryViewController.m */; };
+		9F8FF67312F5F421001FDEAF /* EntryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F8FF67212F5F421001FDEAF /* EntryView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -272,6 +274,9 @@
 		9F8FF4E112F5D2CF001FDEAF /* CNumberToStringValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNumberToStringValueTransformer.m; sourceTree = "<group>"; };
 		9F8FF51012F5D340001FDEAF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		9F8FF51C12F5D42D001FDEAF /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		9F8FF66F12F5F410001FDEAF /* EntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryViewController.h; sourceTree = "<group>"; };
+		9F8FF67012F5F410001FDEAF /* EntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryViewController.m; sourceTree = "<group>"; };
+		9F8FF67212F5F421001FDEAF /* EntryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntryView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +307,8 @@
 				9F8FF28512F4C3B8001FDEAF /* CategoriesViewController.m */,
 				9F8FF3FB12F59464001FDEAF /* HeadlinesViewController.h */,
 				9F8FF3FC12F59464001FDEAF /* HeadlinesViewController.m */,
+				9F8FF66F12F5F410001FDEAF /* EntryViewController.h */,
+				9F8FF67012F5F410001FDEAF /* EntryViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -367,6 +374,7 @@
 				9F8FF1D412F488FF001FDEAF /* NewsIndexesView.xib */,
 				9F8FF28712F4C3FA001FDEAF /* CategoriesView.xib */,
 				9F8FF3F912F59419001FDEAF /* HeadlinesView.xib */,
+				9F8FF67212F5F421001FDEAF /* EntryView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -721,6 +729,7 @@
 				9F8FF3FA12F59419001FDEAF /* HeadlinesView.xib in Resources */,
 				9F8FF45012F5D2B6001FDEAF /* AtomKeywords.gperf in Resources */,
 				9F8FF45312F5D2B6001FDEAF /* RSSKeywords.gperf in Resources */,
+				9F8FF67312F5F421001FDEAF /* EntryView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -805,6 +814,7 @@
 				9F8FF50912F5D2CF001FDEAF /* CFloatTransformer.m in Sources */,
 				9F8FF50A12F5D2CF001FDEAF /* CHumanDateFormatter.m in Sources */,
 				9F8FF50B12F5D2CF001FDEAF /* CNumberToStringValueTransformer.m in Sources */,
+				9F8FF67112F5F410001FDEAF /* EntryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

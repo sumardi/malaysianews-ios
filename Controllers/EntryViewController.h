@@ -1,8 +1,8 @@
 //
-//  HeadlinesViewController.h
+//  EntryViewController.h
 //  MalaysiaNews
 //
-//  Created by Sumardi Shukor on 1/30/11.
+//  Created by Sumardi Shukor on 1/31/11.
 //  Copyright 2011 Software Machine Development. All rights reserved.
 //	<support[at]smd.com.my>
 //
@@ -19,21 +19,16 @@
 //	You should have received a copy of the GNU General Public License
 //	along with Malaysia News. If not, see <http://www.gnu.org/licenses/>
 
-#import <UIKit/UIKit.h>
-#import "CFeedFetcher.h"
-@class CFeedEntry;
-@class MalaysiaNewsAppDelegate;
 
-@interface HeadlinesViewController : UITableViewController <CFeedFetcherDelegate> {
-	MalaysiaNewsAppDelegate *appDelegate;
-	
-	NSString *rss;
-	NSArray *entries;
+#import <UIKit/UIKit.h>
+
+
+@interface EntryViewController : UIViewController {
+	UIWebView *webView;
+	NSString *link;
 }
 
-@property (nonatomic, retain) MalaysiaNewsAppDelegate *appDelegate;
-
-@property (nonatomic, retain) NSString *rss;
-@property (nonatomic, retain) NSArray *entries;
+@property (nonatomic, retain) IBOutlet UIWebView *webView;
+@property (nonatomic, retain) NSString *link;
 
 @end

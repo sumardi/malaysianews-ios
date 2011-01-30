@@ -24,10 +24,12 @@
 #import "CFeedStore.h"
 #import "CFeedFetcher.h"
 #import "CFeedEntry.h"
+#import "EntryViewController.h"
+#import "MalaysiaNewsAppDelegate.h"
 
 @implementation HeadlinesViewController
 
-@synthesize rss, entries;
+@synthesize appDelegate, rss, entries;
 
 #pragma mark -
 #pragma mark Initialization
@@ -49,26 +51,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	//entries = [[NSArray alloc] init];
+	appDelegate = (MalaysiaNewsAppDelegate *)[[UIApplication sharedApplication] delegate];
 	CFeed *feed = [[CFeedStore instance] feedForURL:[NSURL URLWithString:rss] fetch:YES];
 	entries = [[NSArray alloc] initWithArray:[[feed entries] sortedArrayUsingDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"fetchOrder" ascending:YES]]]];
-	
-	//CFeedFetcher *feedFetcher = [[CFeedFetcher alloc] initWithFeedStore:[CFeedStore instance]];
-//	[feedFetcher setDelegate:self];
-//	NSError *error = nil;
-//	[feedFetcher subscribeToURL:[NSURL URLWithString:rss] error:&error];
-//	[feedFetcher setFetchInterval:600.0];
-	//CFeedEntry *theEntry = [entries objectAtIndex:1];
-	//NSLog(@"%@", theEntry);
-	
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
-- (void)feedFetcher:(CFeedFetcher *)inFeedFetcher didFetchFeed:(CFeed *)inFeed
-{
-	//NSLog(@"Fetcher fetched feed %@", inFeed);
-//	NSLog(@"New entries: %@", [inFeed entries]);
 }
 
 /*
@@ -114,6 +99,17 @@
     return [entries count];
 }
 
+- (NSString *)flattenHTML:(NSString *)html {
+    NSScanner *thescanner;
+    NSString *text = nil;
+    thescanner = [NSScanner scannerWithString:html];
+    while ([thescanner isAtEnd] == NO) {
+        [thescanner scanUpToString:@"<" intoString:nil];
+        [thescanner scanUpToString:@">" intoString:&text];
+        html = [html stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%@>", text] withString:@" "];
+	}
+    return html;
+}
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -122,16 +118,38 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+		cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
+		cell.textLabel.numberOfLines = 0;
+		cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:17.0];
+		cell.detailTextLabel.lineBreakMode = UILineBreakModeWordWrap;
+		cell.detailTextLabel.numberOfLines = 0;
+		cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:13.0];
+
     }
     
     // Configure the cell...
 	CFeedEntry *theEntry = [entries objectAtIndex:indexPath.row];
 	cell.textLabel.text = theEntry.title;
+	cell.detailTextLabel.text = [self flattenHTML:theEntry.content];
+	NSLog(@"%@", [entries objectAtIndex:indexPath.row]);
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+	CFeedEntry *theEntry = [entries objectAtIndex:indexPath.row];
+    NSString *cellText = theEntry.title;
+    CGSize constraintSize = CGSizeMake(280.0f, MAXFLOAT);
+	UIFont *textFont = [UIFont fontWithName:@"Helvetica" size:17.0];
+    CGSize entrySize = [cellText sizeWithFont:textFont constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
+	
+	NSString *cellDetail = [self flattenHTML:theEntry.content];
+	UIFont *detailFont = [UIFont fontWithName:@"Helvetica" size:13.0];
+	CGSize detailSize = [cellDetail sizeWithFont:detailFont constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
+	
+    return entrySize.height + detailSize.height + 10;
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -177,14 +195,10 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-    [detailViewController release];
-    */
+	EntryViewController *entryViewController = [[EntryViewController alloc] initWithNibName:@"EntryView" bundle:nil];
+	entryViewController.link = [[entries objectAtIndex:indexPath.row] link];
+	[appDelegate.navigationController pushViewController:entryViewController animated:YES];
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 
@@ -205,7 +219,9 @@
 
 
 - (void)dealloc {
+	[appDelegate release];
 	[rss release];
+	[entries release];
     [super dealloc];
 }
 
