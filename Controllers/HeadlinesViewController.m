@@ -20,11 +20,14 @@
 //	along with Malaysia News. If not, see <http://www.gnu.org/licenses/>
 
 #import "HeadlinesViewController.h"
-
+#import "CFeed.h"
+#import "CFeedStore.h"
+#import "CFeedFetcher.h"
+#import "CFeedEntry.h"
 
 @implementation HeadlinesViewController
 
-@synthesize rss;
+@synthesize rss, entries;
 
 #pragma mark -
 #pragma mark Initialization
@@ -46,9 +49,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	NSLog(@"%@", rss);
+	//entries = [[NSArray alloc] init];
+	CFeed *feed = [[CFeedStore instance] feedForURL:[NSURL URLWithString:rss] fetch:YES];
+	entries = [[NSArray alloc] initWithArray:[[feed entries] sortedArrayUsingDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"fetchOrder" ascending:YES]]]];
+	
+	//CFeedFetcher *feedFetcher = [[CFeedFetcher alloc] initWithFeedStore:[CFeedStore instance]];
+//	[feedFetcher setDelegate:self];
+//	NSError *error = nil;
+//	[feedFetcher subscribeToURL:[NSURL URLWithString:rss] error:&error];
+//	[feedFetcher setFetchInterval:600.0];
+	//CFeedEntry *theEntry = [entries objectAtIndex:1];
+	//NSLog(@"%@", theEntry);
+	
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)feedFetcher:(CFeedFetcher *)inFeedFetcher didFetchFeed:(CFeed *)inFeed
+{
+	//NSLog(@"Fetcher fetched feed %@", inFeed);
+//	NSLog(@"New entries: %@", [inFeed entries]);
 }
 
 /*
@@ -91,7 +111,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 2;
+    return [entries count];
 }
 
 
@@ -103,10 +123,12 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
     // Configure the cell...
-    
+	CFeedEntry *theEntry = [entries objectAtIndex:indexPath.row];
+	cell.textLabel.text = theEntry.title;
     return cell;
 }
 

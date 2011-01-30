@@ -20,12 +20,15 @@
 //	along with Malaysia News. If not, see <http://www.gnu.org/licenses/>
 
 #import <UIKit/UIKit.h>
+#import "CFeedFetcher.h"
+@class CFeedEntry;
 
-
-@interface HeadlinesViewController : UITableViewController {
+@interface HeadlinesViewController : UITableViewController <CFeedFetcherDelegate> {
 	NSString *rss;
+	NSArray *entries;
 }
 
 @property (nonatomic, retain) NSString *rss;
+@property (nonatomic, retain) NSArray *entries;
 
 @end
