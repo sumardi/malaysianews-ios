@@ -115,7 +115,6 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
-    NSLog(@"%i", indexPath.row);
 	cell.textLabel.text = [NSString stringWithFormat:@"%@", [[appDelegate.data allKeys] objectAtIndex:indexPath.row]];
 	cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png", [[appDelegate.data allKeys] objectAtIndex:indexPath.row]]];
     return cell;

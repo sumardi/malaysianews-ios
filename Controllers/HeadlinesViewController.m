@@ -51,7 +51,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	NSLog(@"%@", rss);
 	appDelegate = (MalaysiaNewsAppDelegate *)[[UIApplication sharedApplication] delegate];
 	CFeedFetcher *feedFetcher = [[CFeedFetcher alloc] initWithFeedStore:[CFeedStore instance]];
 	[feedFetcher setDelegate:self];
@@ -149,7 +148,6 @@
 		cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:13.0];
 
     }
-    NSLog(@"%@", entries);
     // Configure the cell...
 	CFeedEntry *theEntry = [entries objectAtIndex:indexPath.row];
 	cell.textLabel.text = theEntry.title;
