@@ -32,32 +32,7 @@
 		<key>Sports</key>
 		<string>http://thestar.com.my.feedsportal.com/c/33048/f/534557/index.rss</string>
 	</dict>
-	<key>Malaysiakini</key>
-	<dict>
-		<key>News</key>
-		<string>http://www.malaysiakini.com/rss/index.php?l=en&amp;c=news</string>
-		<key>Columns</key>
-		<string>http://www.malaysiakini.com/rss/index.php?l=en&amp;c=columns</string>
-		<key>Opinions</key>
-		<string>http://www.malaysiakini.com/rss/index.php?l=en&amp;c=opinions</string>
-		<key>Editorials</key>
-		<string>http://www.malaysiakini.com/rss/index.php?l=en&amp;c=editorials</string>
-		<key>Letters</key>
-		<string>http://www.malaysiakini.com/rss/index.php?l=en&amp;c=letters</string>
-		<key>Berita</key>
-		<string>http://www.malaysiakini.com/rss/index.php?l=my&amp;c=news</string>
-		<key>Kolum</key>
-		<string>http://www.malaysiakini.com/rss/index.php?l=my&amp;c=columns</string>
-		<key>Pendapat</key>
-		<string>http://www.malaysiakini.com/rss/index.php?l=my&amp;c=opinions</string>
-		<key>Minda Editor</key>
-		<string>http://www.malaysiakini.com/rss/index.php?l=my&amp;c=editorials</string>
-		<key>Surat</key>
-		<string>http://www.malaysiakini.com/rss/index.php?l=my&amp;c=letters</string>
-		<key>新闻</key>
-		<string>http://www.malaysiakini.com/rss/index.php?l=zh&amp;c=news</string>
-	</dict>
-	<key>The Malaysian Insider</key>
+	<key>Malaysian Insider</key>
 	<dict>
 		<key>All News</key>
 		<string>http://www.themalaysianinsider.com/rss</string>
@@ -75,13 +50,6 @@
 		<string>http://www.themalaysianinsider.com/rss/business</string>
 		<key>Malaysia</key>
 		<string>http://www.themalaysianinsider.com/rss/malaysia</string>
-	</dict>
-	<key>Berita Harian Online</key>
-	<dict>
-		<key>Muka Depan</key>
-		<string>http://www.bharian.com.my/bharian/RSS/rss_html?section=MukaDepan</string>
-		<key>Muktahir</key>
-		<string>http://www.bharian.com.my/bharian/RSS/rss_html?section=Mutakhir</string>
 	</dict>
 </dict>
 </plist>
