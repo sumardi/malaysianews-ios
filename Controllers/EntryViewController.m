@@ -24,7 +24,7 @@
 
 @implementation EntryViewController
 
-@synthesize webView, link;
+@synthesize window, webView, link, m_activity;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -47,9 +47,23 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	m_activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+	CGPoint newCenter = (CGPoint) [self.view center];
+	m_activity.center = newCenter;
+	[self.view addSubview:m_activity];
+	[m_activity startAnimating];
+	
 	NSURL *url = [NSURL URLWithString:link];
 	NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
 	[webView loadRequest:requestObj];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+	[m_activity stopAnimating];  
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView {     
+	[m_activity startAnimating];     
 }
 
 /*
@@ -75,8 +89,10 @@
 
 
 - (void)dealloc {
+	[window release];
 	[webView release];
 	[link release];
+	[m_activity release];
     [super dealloc];
 }
 

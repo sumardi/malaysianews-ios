@@ -23,12 +23,16 @@
 #import <UIKit/UIKit.h>
 
 
-@interface EntryViewController : UIViewController {
+@interface EntryViewController : UIViewController <UIWebViewDelegate> {
+	UIWindow *window;
 	UIWebView *webView;
 	NSString *link;
+	UIActivityIndicatorView *m_activity;
 }
 
+@property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UIWebView *webView;
 @property (nonatomic, retain) NSString *link;
+@property (nonatomic, retain) IBOutlet UIActivityIndicatorView *m_activity;
 
 @end
