@@ -13,16 +13,18 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; };
+		9F6F68ED12F6069B00F6E023 /* The Malaysian Insider.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6F68EC12F6069B00F6E023 /* The Malaysian Insider.png */; };
+		9F6F68F412F6083300F6E023 /* Malaysia Today.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6F68F312F6083300F6E023 /* Malaysia Today.png */; };
 		9F8FF1AA12F4827C001FDEAF /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F8FF1A912F4827C001FDEAF /* MainWindow.xib */; };
 		9F8FF1B012F482DD001FDEAF /* malaysianews_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F8FF1AF12F482DD001FDEAF /* malaysianews_ico.png */; };
 		9F8FF1D312F488E9001FDEAF /* NewsIndexesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8FF1D212F488E9001FDEAF /* NewsIndexesViewController.m */; };
 		9F8FF1D512F488FF001FDEAF /* NewsIndexesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F8FF1D412F488FF001FDEAF /* NewsIndexesView.xib */; };
 		9F8FF1E912F49C55001FDEAF /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F8FF1E812F49C55001FDEAF /* refresh.png */; };
 		9F8FF21312F4AC12001FDEAF /* FeedsURL.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F8FF21212F4AC12001FDEAF /* FeedsURL.plist */; };
-		9F8FF26C12F4BE3D001FDEAF /* 0_img.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F8FF26B12F4BE3D001FDEAF /* 0_img.png */; };
+		9F8FF26C12F4BE3D001FDEAF /* The Star Online.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F8FF26B12F4BE3D001FDEAF /* The Star Online.png */; };
 		9F8FF28612F4C3B8001FDEAF /* CategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8FF28512F4C3B8001FDEAF /* CategoriesViewController.m */; };
 		9F8FF28812F4C3FA001FDEAF /* CategoriesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F8FF28712F4C3FA001FDEAF /* CategoriesView.xib */; };
-		9F8FF2C512F54B36001FDEAF /* 1_img.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F8FF2C412F54B36001FDEAF /* 1_img.png */; };
+		9F8FF2C512F54B36001FDEAF /* Berita Harian Online.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F8FF2C412F54B36001FDEAF /* Berita Harian Online.png */; };
 		9F8FF3FA12F59419001FDEAF /* HeadlinesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F8FF3F912F59419001FDEAF /* HeadlinesView.xib */; };
 		9F8FF3FD12F59464001FDEAF /* HeadlinesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8FF3FC12F59464001FDEAF /* HeadlinesViewController.m */; };
 		9F8FF44812F5D2B6001FDEAF /* CFeedFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8FF42712F5D2B6001FDEAF /* CFeedFetcher.m */; };
@@ -100,6 +102,7 @@
 		9F8FF51D12F5D42D001FDEAF /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8FF51C12F5D42D001FDEAF /* libxml2.2.dylib */; };
 		9F8FF67112F5F410001FDEAF /* EntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8FF67012F5F410001FDEAF /* EntryViewController.m */; };
 		9F8FF67312F5F421001FDEAF /* EntryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F8FF67212F5F421001FDEAF /* EntryView.xib */; };
+		9F8FF6E012F6002B001FDEAF /* Malaysiakini.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F8FF6DF12F6002B001FDEAF /* Malaysiakini.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +116,8 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* MalaysiaNews_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MalaysiaNews_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* MalaysiaNews-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MalaysiaNews-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		9F6F68EC12F6069B00F6E023 /* The Malaysian Insider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "The Malaysian Insider.png"; path = "Images/The Malaysian Insider.png"; sourceTree = "<group>"; };
+		9F6F68F312F6083300F6E023 /* Malaysia Today.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Malaysia Today.png"; path = "Images/Malaysia Today.png"; sourceTree = "<group>"; };
 		9F8FF1A912F4827C001FDEAF /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		9F8FF1AF12F482DD001FDEAF /* malaysianews_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = malaysianews_ico.png; path = Images/malaysianews_ico.png; sourceTree = "<group>"; };
 		9F8FF1D112F488E9001FDEAF /* NewsIndexesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsIndexesViewController.h; sourceTree = "<group>"; };
@@ -120,11 +125,11 @@
 		9F8FF1D412F488FF001FDEAF /* NewsIndexesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsIndexesView.xib; sourceTree = "<group>"; };
 		9F8FF1E812F49C55001FDEAF /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = refresh.png; path = Images/refresh.png; sourceTree = "<group>"; };
 		9F8FF21212F4AC12001FDEAF /* FeedsURL.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FeedsURL.plist; sourceTree = "<group>"; };
-		9F8FF26B12F4BE3D001FDEAF /* 0_img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 0_img.png; path = Images/0_img.png; sourceTree = "<group>"; };
+		9F8FF26B12F4BE3D001FDEAF /* The Star Online.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "The Star Online.png"; path = "Images/The Star Online.png"; sourceTree = "<group>"; };
 		9F8FF28412F4C3B8001FDEAF /* CategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesViewController.h; sourceTree = "<group>"; };
 		9F8FF28512F4C3B8001FDEAF /* CategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesViewController.m; sourceTree = "<group>"; };
 		9F8FF28712F4C3FA001FDEAF /* CategoriesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesView.xib; sourceTree = "<group>"; };
-		9F8FF2C412F54B36001FDEAF /* 1_img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1_img.png; path = Images/1_img.png; sourceTree = "<group>"; };
+		9F8FF2C412F54B36001FDEAF /* Berita Harian Online.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Berita Harian Online.png"; path = "Images/Berita Harian Online.png"; sourceTree = "<group>"; };
 		9F8FF3F912F59419001FDEAF /* HeadlinesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeadlinesView.xib; sourceTree = "<group>"; };
 		9F8FF3FB12F59464001FDEAF /* HeadlinesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlinesViewController.h; sourceTree = "<group>"; };
 		9F8FF3FC12F59464001FDEAF /* HeadlinesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlinesViewController.m; sourceTree = "<group>"; };
@@ -277,6 +282,7 @@
 		9F8FF66F12F5F410001FDEAF /* EntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryViewController.h; sourceTree = "<group>"; };
 		9F8FF67012F5F410001FDEAF /* EntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryViewController.m; sourceTree = "<group>"; };
 		9F8FF67212F5F421001FDEAF /* EntryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntryView.xib; sourceTree = "<group>"; };
+		9F8FF6DF12F6002B001FDEAF /* Malaysiakini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Malaysiakini.png; path = Images/Malaysiakini.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -382,8 +388,11 @@
 		9F8FF1AC12F482B3001FDEAF /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				9F8FF26B12F4BE3D001FDEAF /* 0_img.png */,
-				9F8FF2C412F54B36001FDEAF /* 1_img.png */,
+				9F6F68F312F6083300F6E023 /* Malaysia Today.png */,
+				9F6F68EC12F6069B00F6E023 /* The Malaysian Insider.png */,
+				9F8FF6DF12F6002B001FDEAF /* Malaysiakini.png */,
+				9F8FF26B12F4BE3D001FDEAF /* The Star Online.png */,
+				9F8FF2C412F54B36001FDEAF /* Berita Harian Online.png */,
 				9F8FF1E812F49C55001FDEAF /* refresh.png */,
 				9F8FF1AF12F482DD001FDEAF /* malaysianews_ico.png */,
 			);
@@ -723,13 +732,16 @@
 				9F8FF1D512F488FF001FDEAF /* NewsIndexesView.xib in Resources */,
 				9F8FF1E912F49C55001FDEAF /* refresh.png in Resources */,
 				9F8FF21312F4AC12001FDEAF /* FeedsURL.plist in Resources */,
-				9F8FF26C12F4BE3D001FDEAF /* 0_img.png in Resources */,
+				9F8FF26C12F4BE3D001FDEAF /* The Star Online.png in Resources */,
 				9F8FF28812F4C3FA001FDEAF /* CategoriesView.xib in Resources */,
-				9F8FF2C512F54B36001FDEAF /* 1_img.png in Resources */,
+				9F8FF2C512F54B36001FDEAF /* Berita Harian Online.png in Resources */,
 				9F8FF3FA12F59419001FDEAF /* HeadlinesView.xib in Resources */,
 				9F8FF45012F5D2B6001FDEAF /* AtomKeywords.gperf in Resources */,
 				9F8FF45312F5D2B6001FDEAF /* RSSKeywords.gperf in Resources */,
 				9F8FF67312F5F421001FDEAF /* EntryView.xib in Resources */,
+				9F8FF6E012F6002B001FDEAF /* Malaysiakini.png in Resources */,
+				9F6F68ED12F6069B00F6E023 /* The Malaysian Insider.png in Resources */,
+				9F6F68F412F6083300F6E023 /* Malaysia Today.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

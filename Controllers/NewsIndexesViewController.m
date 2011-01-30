@@ -54,11 +54,11 @@
 	self.title = @"Malaysia News";
 	
 	appDelegate = (MalaysiaNewsAppDelegate *)[[UIApplication sharedApplication] delegate];
-	UIBarButtonItem *refreshItem = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"refresh.png"] 
-														style:UIBarButtonItemStylePlain 
-														target:self 
-														action:@selector(updateFeeds:)] autorelease];
-	self.navigationItem.rightBarButtonItem = refreshItem;
+//	UIBarButtonItem *refreshItem = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"refresh.png"] 
+//														style:UIBarButtonItemStylePlain 
+//														target:self 
+//														action:@selector(updateFeeds:)] autorelease];
+//	self.navigationItem.rightBarButtonItem = refreshItem;
 }
 
 /*
@@ -115,9 +115,9 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
-    
+    NSLog(@"%i", indexPath.row);
 	cell.textLabel.text = [NSString stringWithFormat:@"%@", [[appDelegate.data allKeys] objectAtIndex:indexPath.row]];
-	cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%i_img.png", indexPath.row]];
+	cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png", [[appDelegate.data allKeys] objectAtIndex:indexPath.row]]];
     return cell;
 }
 

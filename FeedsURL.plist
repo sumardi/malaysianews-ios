@@ -2,21 +2,86 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Berita Harian Online</key>
+	<key>Malaysia Today</key>
 	<dict>
-		<key>Muktahir</key>
-		<string>http://www.bharian.com.my/bharian/RSS/rss_html?section=Mutakhir</string>
-		<key>Muka Depan</key>
-		<string>http://www.bharian.com.my/bharian/RSS/rss_html?section=MukaDepan</string>
+		<key>Special Reports</key>
+		<string>http://malaysia-today.net/rss/feed/10</string>
+		<key>Letters</key>
+		<string>http://malaysia-today.net/rss/feed/7</string>
+		<key>Columnist</key>
+		<string>http://malaysia-today.net/rss/feed/6</string>
+		<key>News</key>
+		<string>http://malaysia-today.net/rss/feed/8</string>
+		<key>Malaysia Today</key>
+		<string>http://malaysia-today.net/rss/feed/12</string>
 	</dict>
 	<key>The Star Online</key>
 	<dict>
-		<key>Sports</key>
-		<string>http://thestar.com.my.feedsportal.com/c/33048/f/534557/index.rss</string>
-		<key>Business</key>
-		<string>http://thestar.com.my.feedsportal.com/c/33048/f/534556/index.rss</string>
 		<key>Nation</key>
 		<string>http://thestar.com.my.feedsportal.com/c/33048/f/534555/index.rss</string>
+		<key>Business</key>
+		<string>http://thestar.com.my.feedsportal.com/c/33048/f/534556/index.rss</string>
+		<key>World Updates</key>
+		<string>http://thestar.com.my.feedsportal.com/c/33048/f/534559/index.rss</string>
+		<key>Technology</key>
+		<string>http://thestar.com.my.feedsportal.com/c/33048/f/534588/index.rss</string>
+		<key>Movies</key>
+		<string>http://thestar.com.my.feedsportal.com/c/33048/f/534571/index.rss</string>
+		<key>Music</key>
+		<string>http://thestar.com.my.feedsportal.com/c/33048/f/534570/index.rss</string>
+		<key>Sports</key>
+		<string>http://thestar.com.my.feedsportal.com/c/33048/f/534557/index.rss</string>
+	</dict>
+	<key>Malaysiakini</key>
+	<dict>
+		<key>News</key>
+		<string>http://www.malaysiakini.com/rss/index.php?l=en&amp;c=news</string>
+		<key>Columns</key>
+		<string>http://www.malaysiakini.com/rss/index.php?l=en&amp;c=columns</string>
+		<key>Opinions</key>
+		<string>http://www.malaysiakini.com/rss/index.php?l=en&amp;c=opinions</string>
+		<key>Editorials</key>
+		<string>http://www.malaysiakini.com/rss/index.php?l=en&amp;c=editorials</string>
+		<key>Letters</key>
+		<string>http://www.malaysiakini.com/rss/index.php?l=en&amp;c=letters</string>
+		<key>Berita</key>
+		<string>http://www.malaysiakini.com/rss/index.php?l=my&amp;c=news</string>
+		<key>Kolum</key>
+		<string>http://www.malaysiakini.com/rss/index.php?l=my&amp;c=columns</string>
+		<key>Pendapat</key>
+		<string>http://www.malaysiakini.com/rss/index.php?l=my&amp;c=opinions</string>
+		<key>Minda Editor</key>
+		<string>http://www.malaysiakini.com/rss/index.php?l=my&amp;c=editorials</string>
+		<key>Surat</key>
+		<string>http://www.malaysiakini.com/rss/index.php?l=my&amp;c=letters</string>
+		<key>新闻</key>
+		<string>http://www.malaysiakini.com/rss/index.php?l=zh&amp;c=news</string>
+	</dict>
+	<key>The Malaysian Insider</key>
+	<dict>
+		<key>All News</key>
+		<string>http://www.themalaysianinsider.com/rss</string>
+		<key>Breaking News</key>
+		<string>http://www.themalaysianinsider.com/rss/breakingviews</string>
+		<key>Features</key>
+		<string>http://www.themalaysianinsider.com/rss/features</string>
+		<key>Sports</key>
+		<string>http://www.themalaysianinsider.com/rss/sports</string>
+		<key>Showbiz</key>
+		<string>http://www.themalaysianinsider.com/rss/showbiz</string>
+		<key>World</key>
+		<string>http://www.themalaysianinsider.com/rss/world</string>
+		<key>Business</key>
+		<string>http://www.themalaysianinsider.com/rss/business</string>
+		<key>Malaysia</key>
+		<string>http://www.themalaysianinsider.com/rss/malaysia</string>
+	</dict>
+	<key>Berita Harian Online</key>
+	<dict>
+		<key>Muka Depan</key>
+		<string>http://www.bharian.com.my/bharian/RSS/rss_html?section=MukaDepan</string>
+		<key>Muktahir</key>
+		<string>http://www.bharian.com.my/bharian/RSS/rss_html?section=Mutakhir</string>
 	</dict>
 </dict>
 </plist>

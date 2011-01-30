@@ -51,16 +51,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	NSLog(@"%@", rss);
 	appDelegate = (MalaysiaNewsAppDelegate *)[[UIApplication sharedApplication] delegate];
+	CFeedFetcher *feedFetcher = [[CFeedFetcher alloc] initWithFeedStore:[CFeedStore instance]];
+	[feedFetcher setDelegate:self];
+	NSError *error = nil;
+	[feedFetcher subscribeToURL:[NSURL URLWithString:rss] error:&error];
+	[feedFetcher setFetchInterval:1];
+	
 	CFeed *feed = [[CFeedStore instance] feedForURL:[NSURL URLWithString:rss] fetch:YES];
 	entries = [[NSArray alloc] initWithArray:[[feed entries] sortedArrayUsingDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"fetchOrder" ascending:YES]]]];
 }
 
-/*
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+	CFeedFetcher *feedFetcher = [[CFeedFetcher alloc] initWithFeedStore:[CFeedStore instance]];
+	[feedFetcher setDelegate:self];
+	NSError *error = nil;
+	[feedFetcher subscribeToURL:[NSURL URLWithString:rss] error:&error];
+	[feedFetcher setFetchInterval:1];
+	//NSLog(@"%@", feedFetcher);
 }
-*/
+
+- (void)feedFetcher:(CFeedFetcher *)inFeedFetcher didFetchFeed:(CFeed *)inFeed {
+	//NSLog(@"Fetcher fetched feed %@", inFeed);
+	//NSLog(@"New entries: %@", [inFeed entries]);
+	entries = [[NSArray alloc] initWithArray:[[inFeed entries] sortedArrayUsingDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"fetchOrder" ascending:YES]]]];
+	//NSLog(@"%@", entries);
+}
+
+
 /*
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -128,7 +149,7 @@
 		cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:13.0];
 
     }
-    
+    NSLog(@"%@", entries);
     // Configure the cell...
 	CFeedEntry *theEntry = [entries objectAtIndex:indexPath.row];
 	cell.textLabel.text = theEntry.title;
