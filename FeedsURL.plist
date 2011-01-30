@@ -2,7 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>The Star</key>
+	<key>Berita Harian Online</key>
+	<dict>
+		<key>Muktahir</key>
+		<string>http://www.bharian.com.my/bharian/RSS/rss_html?section=Mutakhir</string>
+		<key>Muka Depan</key>
+		<string>http://www.bharian.com.my/bharian/RSS/rss_html?section=MukaDepan</string>
+	</dict>
+	<key>The Star Online</key>
 	<dict>
 		<key>Sports</key>
 		<string>http://thestar.com.my.feedsportal.com/c/33048/f/534557/index.rss</string>

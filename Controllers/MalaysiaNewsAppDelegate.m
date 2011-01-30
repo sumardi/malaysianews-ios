@@ -30,13 +30,6 @@
 #pragma mark -
 #pragma mark Application lifecycle
 
-// Get data from plist
--(NSDictionary *) readList {
-	NSString *path = [[NSBundle mainBundle] pathForResource:@"FeedsURL" ofType:@"plist"];
-	NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
-	return dict;
-}
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
     // Override point for customization after application launch.
@@ -44,7 +37,9 @@
     [self.window makeKeyAndVisible];
     [self.window addSubview:navigationController.view];
 	
-	self.data = [[NSMutableDictionary alloc] initWithDictionary:[[self readList] mutableCopy]];
+	NSString *path = [[NSBundle mainBundle] pathForResource:@"FeedsURL" ofType:@"plist"];
+	NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
+	data = [[NSMutableDictionary alloc] initWithDictionary:dict];
     return YES;
 }
 

@@ -1,5 +1,5 @@
 //
-//  NewsIndexesViewController.m
+//  HeadlinesViewController.m
 //  MalaysiaNews
 //
 //  Created by Sumardi Shukor on 1/30/11.
@@ -19,13 +19,12 @@
 //	You should have received a copy of the GNU General Public License
 //	along with Malaysia News. If not, see <http://www.gnu.org/licenses/>
 
-#import "NewsIndexesViewController.h"
-#import "MalaysiaNewsAppDelegate.h"
-#import "CategoriesViewController.h"
+#import "HeadlinesViewController.h"
 
-@implementation NewsIndexesViewController
 
-@synthesize appDelegate;
+@implementation HeadlinesViewController
+
+@synthesize rss;
 
 #pragma mark -
 #pragma mark Initialization
@@ -45,20 +44,11 @@
 #pragma mark -
 #pragma mark View lifecycle
 
--(IBAction) updateFeeds:(id) sender {
-	
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-	self.title = @"Malaysia News";
-	
-	appDelegate = (MalaysiaNewsAppDelegate *)[[UIApplication sharedApplication] delegate];
-	UIBarButtonItem *refreshItem = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"refresh.png"] 
-														style:UIBarButtonItemStylePlain 
-														target:self 
-														action:@selector(updateFeeds:)] autorelease];
-	self.navigationItem.rightBarButtonItem = refreshItem;
+	NSLog(@"%@", rss);
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 /*
@@ -101,7 +91,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return [appDelegate.data count];
+    return 2;
 }
 
 
@@ -112,12 +102,11 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
-		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-	cell.textLabel.text = [NSString stringWithFormat:@"%@", [[appDelegate.data allKeys] objectAtIndex:indexPath.row]];
-	cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%i_img.png", indexPath.row]];
+    // Configure the cell...
+    
     return cell;
 }
 
@@ -166,15 +155,14 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	CategoriesViewController *categoryController = [[CategoriesViewController alloc] initWithNibName:@"CategoriesView" bundle:nil];
-	categoryController.title = [[appDelegate.data allKeys] objectAtIndex:indexPath.row];
-	categoryController.selectedNews = [[appDelegate.data allKeys] objectAtIndex:indexPath.row];
-	[appDelegate.navigationController pushViewController:categoryController animated:YES];
-	[tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
-
-- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-	return 60;
+    // Navigation logic may go here. Create and push another view controller.
+    /*
+    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     // ...
+     // Pass the selected object to the new view controller.
+    [self.navigationController pushViewController:detailViewController animated:YES];
+    [detailViewController release];
+    */
 }
 
 
@@ -195,7 +183,7 @@
 
 
 - (void)dealloc {
-	[appDelegate release];
+	[rss release];
     [super dealloc];
 }
 
