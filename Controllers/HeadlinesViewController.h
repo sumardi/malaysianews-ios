@@ -29,11 +29,15 @@
 	
 	NSString *rss;
 	NSArray *entries;
+	
+	UITableView *uiTableView;
 }
 
 @property (nonatomic, retain) MalaysiaNewsAppDelegate *appDelegate;
 
 @property (nonatomic, retain) NSString *rss;
 @property (nonatomic, retain) NSArray *entries;
+
+@property (nonatomic, retain) IBOutlet UITableView *uiTableView;
 
 @end

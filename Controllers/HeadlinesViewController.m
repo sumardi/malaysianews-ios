@@ -29,7 +29,7 @@
 
 @implementation HeadlinesViewController
 
-@synthesize appDelegate, rss, entries;
+@synthesize appDelegate, rss, entries, uiTableView;
 
 #pragma mark -
 #pragma mark Initialization
@@ -51,6 +51,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
 	appDelegate = (MalaysiaNewsAppDelegate *)[[UIApplication sharedApplication] delegate];
 	CFeedFetcher *feedFetcher = [[CFeedFetcher alloc] initWithFeedStore:[CFeedStore instance]];
 	[feedFetcher setDelegate:self];
@@ -60,6 +61,7 @@
 	
 	CFeed *feed = [[CFeedStore instance] feedForURL:[NSURL URLWithString:rss] fetch:YES];
 	entries = [[NSArray alloc] initWithArray:[[feed entries] sortedArrayUsingDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"fetchOrder" ascending:YES]]]];
+	[uiTableView reloadData];
 }
 
 
@@ -70,14 +72,11 @@
 	NSError *error = nil;
 	[feedFetcher subscribeToURL:[NSURL URLWithString:rss] error:&error];
 	[feedFetcher setFetchInterval:1];
-	//NSLog(@"%@", feedFetcher);
 }
 
 - (void)feedFetcher:(CFeedFetcher *)inFeedFetcher didFetchFeed:(CFeed *)inFeed {
-	//NSLog(@"Fetcher fetched feed %@", inFeed);
-	//NSLog(@"New entries: %@", [inFeed entries]);
 	entries = [[NSArray alloc] initWithArray:[[inFeed entries] sortedArrayUsingDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"fetchOrder" ascending:YES]]]];
-	//NSLog(@"%@", entries);
+	[uiTableView reloadData];
 }
 
 
@@ -241,6 +240,7 @@
 	[appDelegate release];
 	[rss release];
 	[entries release];
+	[uiTableView release];
     [super dealloc];
 }
 
